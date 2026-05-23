@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA Fantasy Draft - All-Time Legends</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏀 NBA Fantasy Draft</h1>
+            <p class="tagline">Create Your All-Time Dream Team</p>
+        </header>
+
+        <main>
+            <section id="lobby-section" class="lobby-section">
+                <div class="lobby-container">
+                    <h2>Create or Join a Lobby</h2>
+                    
+                    <div class="form-group">
+                        <label for="playerName">Your Name:</label>
+                        <input type="text" id="playerName" placeholder="Enter your name" />
+                    </div>
+
+                    <div class="button-group">
+                        <button id="createLobbyBtn" class="btn btn-primary">Create Lobby</button>
+                        <button id="joinLobbyBtn" class="btn btn-secondary">Join Lobby</button>
+                    </div>
+
+                    <div id="joinLobbyForm" class="hidden">
+                        <div class="form-group">
+                            <label for="lobbyCode">Lobby Code:</label>
+                            <input type="text" id="lobbyCode" placeholder="Enter 6-digit code" maxlength="6" />
+                        </div>
+                        <button id="confirmJoinBtn" class="btn btn-primary">Confirm Join</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="draft-section" class="draft-section hidden">
+                <div class="draft-container">
+                    <div class="sidebar">
+                        <div class="lobby-info">
+                            <h3>Lobby: <span id="displayLobbyCode"></span></h3>
+                            <p id="draftRound">Round: <span>1</span> / 15</p>
+                        </div>
+
+                        <div class="players-list">
+                            <h4>Participants</h4>
+                            <ul id="playersList"></ul>
+                        </div>
+                    </div>
+
+                    <div class="main-draft">
+                        <div class="draft-turn">
+                            <h3>Current Turn: <span id="currentPlayer"></span></h3>
+                        </div>
+
+                        <div class="player-search">
+                            <input type="text" id="playerSearch" placeholder="Search NBA players..." />
+                            <div id="searchResults" class="search-results"></div>
+                        </div>
+
+                        <div class="team-display">
+                            <h3>Your Team</h3>
+                            <ul id="myTeam" class="team-list"></ul>
+                        </div>
+                    </div>
+
+                    <div class="draft-log">
+                        <h4>Draft Log</h4>
+                        <ul id="draftLog" class="log-list"></ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="nba-players.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
